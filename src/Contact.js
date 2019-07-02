@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+// import helpers from './helpers.js';
 import './Contact.css';
 
 class Contact extends Component {
-
+  
   state = {
     name: '',
     message: '',
@@ -25,11 +26,20 @@ class Contact extends Component {
       message: this.state.message
     }
 
-    axios.post('https://nodejs-express-lyvzyj2up.now.sh/', data)
-      .then(res => {
+    axios.post({
+      method: 'post',
+      url: 'https://nodejs-express-fobridqcl.now.sh/',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      }
+    }, data
+    )
+      .then(res => { // the message is not being sent, so the .catch is executing. im showing a 404 not found error in console
         this.setState({
           sent: true
-        }, this.resetForm())
+        }, 
+        this.resetForm())
+        console.log(this);
       })
       .catch(() => {
         console.log('Message not sent')
@@ -46,17 +56,17 @@ class Contact extends Component {
   } 
 
   render() {
-    return( // will change the classNames to match my styles later
+    return(
       <div className="Form-container">
-        <form className="form" onSubmit={ (e) => this.formSubmit(e)}>
+        <form className="form" onSubmit={(e) => this.formSubmit(e)}>
 
           <h1>Contact Us</h1>
 
-          <input onChange={e => this.setState({ name: e.target.value})} name="name" class="message-name" type="text" placeholder="Name" value={this.state.name}/>
+          <input onChange={e => this.setState({ name: e.target.value})} name="name" className="message-name" type="text" placeholder="Name" value={this.state.name} />
 
-          <input onChange={(e) => this.setState({ email: e.target.value})} name="email" class="message-email" type="email" placeholder="your@email.com" required value={this.state.email} />
+          <input onChange={e => this.setState({ email: e.target.value})} name="email" className="message-email" type="email" placeholder="your@email.com" required value={this.state.email} />
           
-          <textarea onChange={e => this.setState({ message: e.target.value})} name="message" class="message-input" type="text" placeholder="Message" value={this.state.message} required/>
+          <textarea onChange={e => this.setState({ message: e.target.value})} name="message" className="message-input" type="text" placeholder="Message" value={this.state.message} required />
 
           <button type="submit">{ this.state.buttonText }</button>
 
