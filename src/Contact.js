@@ -25,7 +25,7 @@ class Contact extends Component {
       message: this.state.message
     }
 
-    axios.post('API_URI', data)
+    axios.post('https://nodejs-express-lyvzyj2up.now.sh/', data)
       .then(res => {
         this.setState({
           sent: true
@@ -43,7 +43,7 @@ class Contact extends Component {
       email: '',
       buttonText: 'Message Sent'
     })
-  }
+  } 
 
   render() {
     return( // will change the classNames to match my styles later
