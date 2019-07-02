@@ -14,8 +14,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "now-build": "react-scripts build && mv build dist"
+    "eject": "react-scripts eject"
   },
   "homepage": "https://create-react-app-88eiowfc8.now.sh/",
   "eslintConfig": {
