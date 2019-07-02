@@ -25,7 +25,7 @@ class Contact extends Component {
       message: this.state.message
     }
 
-    axios.post('API_URI', data)
+    axios.post('https://create-react-app-kyd78jo8t.now.sh/', data)
       .then(res => {
         this.setState({
           sent: true
