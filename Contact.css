@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Form-container {
+  width: 100vw;
+  height: 70vh;
+}
+
+.form {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3% 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, .3);
+}
+
+.form>* {
+  margin: 1% 0;
+}
+
+.form h1 {
+  font-weight: 300;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  width: 30vw;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, .3);
+}
+
+.form input[type="text"]:focus,
+.form input[type="text"]:active,
+.form input[type="email"]:focus,
+.form input[type="email"]:active,
+.form textarea:focus,
+.form textarea:active {
+  outline: none;
+  border: 1px solid #da4237;
+}
+
+
+.form input[placeholder],
+.form textarea[placeholder] {
+  padding-left: 10px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  opacity: .6;
+}
+
+.form textarea {
+  height: 30vh;
+}
+
+.form button[type="submit"] {
+  width: 20%;
+  border: none;
+  padding: 1% 2%;
+  background: #da4237;
+  border-radius: 10px;
+  color: #f1f1f1;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+  transition: all .2s ease;
+}
+
+.form button[type="submit"]:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+.form button[type="submit"]:active {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, .3);
+}
+
+.form button[type="submit"]:focus {
+  outline: none;
+}
