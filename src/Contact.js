@@ -43,7 +43,7 @@ class Contact extends Component {
       email: '',
       buttonText: 'Message Sent'
     })
-  }
+  } 
 
   render() {
     return( // will change the classNames to match my styles later
