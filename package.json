@@ -7,14 +7,14 @@
     "cors": "^2.8.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "webpack": "^4.16.1"
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "now-build": "react-scripts build && mv build dist"
   },
   "homepage": "https://create-react-app-88eiowfc8.now.sh/",
   "eslintConfig": {
