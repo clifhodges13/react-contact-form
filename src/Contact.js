@@ -28,7 +28,7 @@ class Contact extends Component {
 
     axios.post({
       method: 'post',
-      url: 'https://nodejs-express-fobridqcl.now.sh/',
+      url: 'https://nodejs-express.lambda-webpt8.now.sh/',
       headers: {
         'Content-Type': 'text/plain;charset=utf-8'
       }
